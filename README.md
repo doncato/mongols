@@ -10,6 +10,6 @@ As a standalone script:<br>
 `python3 main.py mongodb://example.com:27017/`
 
 From another script:<br>
-`from main import list_all`
+`from main import list_all`<br>
 `content = list_all("mongodb://example.com:27017/")`
 
