@@ -2,7 +2,9 @@ import sys,pymongo
 
 def list_all(uri: str):
     the_client = pymongo.MongoClient(uri)
-    the_db = the_client
+    db = {}
+    for the_db in the_client.list_database_names():
+        db[the_db] = the_client[the_db]
     return the_db
 
 if __name__ == "__main__":
